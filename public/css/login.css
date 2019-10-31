@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height:100vh;
+	color: #313131;
+	background:radial-gradient(#dcffcc,#f5b0cb);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+}
+.box-in-box{
+	box-shadow: .2px 5px 12px rgba(0,0,0,0.2);
+	border-radius: 20px;
+	width: 90%;
+	height: 405px;
+}
+.inputBox{
+	position: relative;
+	margin-bottom: 25px;
+}
+.box-in-box form{
+	height: 100%;
+	text-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+	padding: 1px;
+	text-align: center;
+	background: transparent;
+}
+.box-in-box form h2{
+	text-align: center;
+	margin: 30px 0px;
+    font-size: 33px;
+    font-weight: 500;
+    user-select: none;
+    color:deeppink;
+}
+.box-in-box form input{
+	width: 80%;
+	height:40px;
+	border:none;
+	border-bottom: 1px solid dodgerblue;
+	outline: none;
+	padding: 5px;
+	font-size: 20px;
+	margin-top: 9px;
+	background-color: transparent;
+}
+.box-in-box form label{
+	position: absolute;
+	font-size: 20px;
+    left: 56px;
+    bottom: 6px;
+    pointer-events: none; /*voo hieeu hoa cac su kien click tren the label*/
+    color: gray;
+    transition: 200ms ease;
+}
+.box-in-box form input:focus + label,.box-in-box form input:valid + label{
+	bottom: 35px;
+    left: 43px;
+	color: dodgerblue; 
+}
+.box-in-box form button{
+	width: 80%;
+    border: none;
+    padding: 9px;
+    border-radius: 26px;
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 17px 23px;
+    cursor: pointer;
+}
+.box-in-box form button:hover{
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+	color: white;
+}
+.box-in-box form .text{
+	margin-top: 25px;
+}
+@media (min-width: 481px){
+	.box-in-box{
+		width: 480px;
+	}
+}
