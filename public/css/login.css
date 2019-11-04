@@ -89,3 +89,54 @@
 		width: 480px;
 	}
 }
+/* css for form register*/
+div#register{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.8);
+	top:-100vh;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	transition: 1.5s;
+}
+.top0{
+	top:0!important;
+}
+#SignUp{
+	cursor: pointer;
+	color: #6f9a8d;
+}
+/*-------*/
+#register-close{
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+}
+#register-close div{
+	width: 100%;
+	height: 10px;
+	background-color: white;
+	margin-bottom: 10px;
+}
+#register-close div:nth-child(1){
+	transform: rotate(30deg) translateY(13px);
+}
+#register-close div:nth-child(2){
+	transform: rotate(-30deg) translateY(-10px);
+}
+
+.error-login{
+	position: absolute;
+	top:30px;
+	left:-100%;
+	width: 50%;
+	transition: 1s;
+}
+.left50{
+	left: 25%!important;
+}
