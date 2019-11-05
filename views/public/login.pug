@@ -1,0 +1,53 @@
+include ../common/header
+if error 
+    .error-login.alert.alert-primary= error 
+.box
+  .box-in-box
+    form#formLogin(action='/login', method='post')
+      h2 Login
+      .inputBox
+        input(type='text', name='username', value=username ? username:'', required='')
+        label(for='') Username
+      .inputBox
+        input(type='password', name='password', value= password ? password:'', required='')
+        label(for='') Pasword
+      button(type='submit') Login
+      .text
+        span Don&apos;t have account? 
+        span#SignUp Sign Up
+// form đăng kí
+#register
+  #register-close(title='close')
+    div
+    div
+  br
+  form(style='width:500px;height:75vh;', action='/register', method='post')
+    .row
+      input.form-control(type='text', placeholder='First name', required='', name='firstname')
+    br
+    .row
+      input.form-control(type='text', placeholder='Last name', required='', name='lastname')
+    br
+    .row
+      input.form-control(type='text', placeholder='Email', required='', name='email')
+    br
+    .row
+      .col-4.p-0
+        select#inputState.form-control(required='', name='gender' ) 
+          option(selected='') Nam
+          option Nữ
+      .col-8.p-0
+        input.form-control(type='text', placeholder='Phone', required='', name='phone')
+    br
+    .row
+      input.form-control(type='text', placeholder='Address', required='', name='address')
+    br
+    .row
+      input.form-control(type='text', placeholder='Username', required='', name='username')
+    br
+    .row
+      input.form-control(type='text', placeholder='Password', required='', name='password')
+    br
+    .row
+      button.btn.btn-primary(type='submit', style='position:absolute;left:50%;transform:translateX(-50%);') Sign up
+include ../common/footer

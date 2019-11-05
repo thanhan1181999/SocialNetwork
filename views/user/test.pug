@@ -1,0 +1,12 @@
+h1 welcome 
+h1= user.first_name
+h1= user.last_name
+h1= user.ip_address
+h1= user.gender
+img(src= user.avatar ? user.avatar:'/image/avatarAuto.jpg',
+	style='height:100px;width:100px;border-radius:50%;')
+
+form(action='/user/postAvatar', method='post', enctype='multipart/form-data')
+  input(type='file', name='avatar')
+  button(type='submit') up
+a(href='/user/logout') logout

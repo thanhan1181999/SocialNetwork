@@ -5,14 +5,14 @@ const app = express();
 //place that save static files
 app.use(express.static('public'));
 //set view template
-app.set('view engine','ejs');
+app.set('view engine','pug');
 app.set('views','./views');
 //database
 const mongo = require('mongoose');
 mongo.connect(process.env.MONGO_URL);
 //can read data client send, user body parser
 const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 //set session
 const session = require('express-session');
 app.use(session({ secret: 'this-is-a-secret-token'}));
