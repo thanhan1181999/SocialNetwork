@@ -4,6 +4,9 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+body{
+	background-color: #FAFAFA;
+}
 .box{
 	display: flex;
 	flex-direction: column;
@@ -91,21 +94,22 @@
 }
 /* css for form register*/
 div#register{
+	z-index: 1000;
 	position: absolute;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0,0,0,.8);
-	top:-100vh;
-	left: 0;
-	right: 0;
+	top:0;
+	right:0;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	transform: scale(0,0);
 	transition: 1.5s;
 }
 .top0{
-	top:0!important;
+	transform: scale(1,1)!important;
 }
 #SignUp{
 	cursor: pointer;
@@ -137,6 +141,11 @@ div#register{
 	width: 50%;
 	transition: 1s;
 }
+
+/*some css*/
 .left50{
 	left: 25%!important;
+}
+.displayNone{
+	display:block!important;
 }

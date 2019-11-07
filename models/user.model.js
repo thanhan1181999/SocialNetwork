@@ -12,6 +12,7 @@ var userSchema = new mongoose.Schema({
 		description:String,
 		date: { type: Date, default: Date.now },
 		likes:Number,
+		url:String,
 		comments:[{
 			 user:String,avatar:String,body: String, date: Date,like:Number
 		}]

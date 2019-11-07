@@ -1,14 +1,17 @@
+include ../common/header
 h1 Hello word
-
-each user in users
-    li= user.first_name
-    li= user.last_name
-    li= user.email
-    li= user.gender
-    li= user.phone
-    li= user.address
-    img(src=user.avatar)
-    li= user.slogan
-    li= user.username
-    li= user.password
-    br
+.container
+    .row
+        each user in users
+            ul.list-group.col-4
+                li.list-group-item= user.first_name
+                li.list-group-item= user.last_name
+                li.list-group-item= user.email
+                li.list-group-item= user.gender
+                li.list-group-item= user.phone
+                li.list-group-item= user.address
+                img.list-group-item.img-fluid(src=user.avatar)
+                li.list-group-item= user.slogan
+                li.list-group-item= user.username
+                li.list-group-item= user.password
+include ../common/footer
